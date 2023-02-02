@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Modules</title>
+</head>
+<style>
+	*{
+		font-family: Arial;
+     	text-decoration: none;
+     } 
+	body{
+		background: url('green.png');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin-left: 20px;
+		margin-right: 20px;
+		text-decoration: none;
+		list-style: none;
+	}
+	h1, h2, h3, p, ol, a, ul{
+		color: white;
+	}
+	.Home
+	{
+		border-radius: 10px;
+		border: none;
+		height: 30px;
+		width: 70px;
+		text-align: center;
+		border-bottom: solid 1px;
+		border-color: : white;
+
+	}
+#menu {
+	background-color: rgba(0, 0, 255, 0);
+	height: 70px;
+	width: 100%;
+}
+#menu li a:hover {
+	color: black;
+	background:skyblue;
+	transition: 0.8s;
+	border-radius:50px ;
+	
+}
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu li {
+	
+	display: inline;
+	position: relative;
+}
+#menu a {
+	font-family: Arial;
+	font-weight: lighter;
+	display: block;
+	line-height: 30px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	text-transform: uppercase;
+	background-color: white;
+	border-radius: 50px;
+}
+
+
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 70px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+
+}
+#menu label {
+	display: none;
+	line-height: 70px;
+	text-align: center;
+	position: absolute;
+	left: 35px;
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+
+@media screen and (max-width: 800px){
+	#menu {
+		position:relative
+	}
+	#menu ul {
+		background:black;
+		position:absolute;
+		top:100%;
+		right:0;
+		left:0;
+		z-index:3;
+		height:auto;
+		display:none}
+	#menu ul.sub-menus {
+		width:100%;
+		position:static;
+	}
+	#menu ul.sub-menus a {
+		padding-left:30px;
+	}
+	#menu li {
+		display:block;
+		float:none;
+		width:auto;
+	}
+	#menu input, #menu label {
+		position:absolute;
+		top:0;
+		left:0;
+		display:block
+	}
+	#menu input {
+		z-index:4;
+	}
+	#menu input:checked + label {
+		color:white;
+	}
+	#menu input:checked + label:before {content:"\00d7"}
+	#menu input:checked ~ ul {display:block}
+}
+</style>
+<body>
+	<nav id="menu">
+	<input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+  <ul >
+  	 
+  <font face="arial">
+  
+  </ul>
+ 
+ 	 </font>
+	 <center>
+		<img src="NLPSC Logo.png" height="100" width="100"  >
+		<img src="CS Logo.png" height="100" width="100">
+	</center>
+  	<li><a href='Home.html' style="float: right;">Home</a></li>
+	
+	<center>
+		<h2>NORTH LUZON PHILIPPINES STATE COLLEGE<br>
+		San Nicolas, Candon City, Ilocos sur</h2>
+	</center>
+ </nav>
+</nav></ul>
+<br><br><br><br><br>
+<h1>CS 301-Emerging Technologies</h3>
+<h3>III. Module and Unit Topics</h3>
+<p>This course has the following modules based on the prototype syllabus given in CMO 25, s. 2015.</p>
+
+<ul type="none">
+	<li><b>Module 1: OVERVIEW OF EMERGING TECHNOLOGIES.</b>
+	<p align="justify">
+	This module aims to introduce to you the concept of applications development and emerging technologies, how they developed and how it is differentiated with existing and developing technologies. It also covers the potential applications of these ET along education, business, health and society. Moreover, Industry 4.0 and smart factory are likewise introduced in this module</p></li><br><br>
+	<li><b>Module 2: REQUIREMENTS ANALYSIS AND MODELING</b>
+	<p align="justify">
+	This module aims to deepen your understanding about requirements analysis and modeling. The knowledge area is concerned with the acquisition, analysis, specification, validation and modeling of software requirements. It presents the major categories of software requirements, techniques of gathering requirements, the characteristics of good requirements, and modeling user -defined requirements.</p></li>
+	<br><br>
+	<li><b>Module 3: DESIGN PRINCIPLES AND PATTERNS.</b>
+		<p align="justify">
+	This module aims to strengthen your technical know-how on how software designs principles and patterns were implemented from simple to more complex software solutions. In this module, you will be introduced to design principles and patterns, emphasizing on the SOLID principle and design patterns catalogs as applied in some object-oriented systems.</p></li><br><br>
+	<li><b>Module 4: PROTOTYPING AND QUALITY ASSURANCE.</b>
+		<p align="justify">
+	This module aims to present to you some developmental concepts and tools along software design and developments. This module gives emphasis on types of prototypes, phases of prototype development and designing prototypes of web, mobile, and business information systems</p></li>
+	<li><b>Module 5: SOFTWARE TESTING AND DEPLOYMENT.</b>
+		<p align="justify">
+	This module aims to impart understanding on the conduct of software testing and deployment. In this module, it highlights types of software testing, areas for system testing, and developing a test plan. Likewise, it presents concepts about software deployment process and areas for consideration for a deployment plan in preparation for the development of a deployment plan template.</p></li><br><br>
+	<li><b>Module 6: ETHICAL AND LEGAL CONSIDERATIONS.</b>
+		<p align="justify">
+	This module aims to deepen your understanding about ethical and legal issues in the light of applications development and emerging technologies. Specifically, it presents understanding between ethics and law, IT professional code of ethics, various ethical and legal considerations within the computing environment.</p></li>
+</ul>
+</body>
+<script>
+	function updatemenu() {
+  if (document.getElementById('responsive-menu').checked == true) {
+    document.getElementById('menu').style.borderBottomRightRadius = '0';
+    document.getElementById('menu').style.borderBottomLeftRadius = '0';
+  }else{
+    document.getElementById('menu').style.borderRadius = '7px';
+  }
+}
+</script>
+</body>
+</html>

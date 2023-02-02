@@ -1,0 +1,102 @@
+<html>
+
+<head>
+<title>LogOut</title>
+
+	<style>
+		*{
+		font-family: Arial;
+     	text-decoration: none;
+     } 
+		html,body
+		
+	{
+		height: 100%;
+		background-image: url(green.png);
+		background-repeat: no-repeat;
+		background-size: 100%;
+	}
+	.canvas
+	
+	{
+			height: 600px;
+			width: 500px;
+			background-color:rgba(0, 0, 0, 0.09);
+			display: table-cell;
+			vertical-align: middle;
+	}
+	.grandParentContainer
+	{
+		display: table; height: 100%;margin: 0 auto;
+
+	}
+
+	.parentContainer
+
+	{
+
+		display: table-cell;vertical-align: middle;
+	}
+	.logo
+	{
+		height: 200px;
+		width: 200px;
+	}
+	
+
+	input
+	{
+		border-radius: 40px;
+		border:none;
+		text-align: center;
+		background-color: transparent;
+		border-bottom: solid 1px;
+		border-color: whitesmoke;
+		font-size: 20;
+	}
+	.login
+	{
+		height: 30px;
+		width: 100px;
+		text-align: center;
+	}
+
+	</style>
+
+</head>
+
+<body> 
+	<div class="grandParentContainer">
+	<div class="parentContainer">
+	<div class="canvas">
+	<center>
+		<img src="NLPSC Logo.png" height="100" width="100" style="float: center" >
+		<img src="CS Logo.png" height="100" width="100" style="float: center">
+	<form>
+
+		<input type="text" name="ID" placeholder="ID Number" id="user"> <br> </br>
+		<input type ="text" name="lname" placeholder="Last Name" id="pass"> <br> </br>
+		<input type ="text" name="fname" placeholder="First Name" id="pass"> <br> </br>
+		<a href='Home.html'>LogIn</a>
+		
+	</form>
+	</center>
+	</div>
+	</div>
+	</div>
+</body>
+		<script>
+			function Login() {
+			var USERNAME = document.getElementById("user").value;
+			var PASSWORD = document.getElementById("pass").value;
+			if (USERNAME =="NLPSC")
+			 {
+			 	if (PASSWORD=="admin")
+			 {
+			 	alert("Login Successful");
+
+			 }
+			 }
+			}
+		</script>
+</html>

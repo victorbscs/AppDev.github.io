@@ -1,0 +1,204 @@
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Course Outline</title>
+</head>
+<style>
+	*{
+		font-family: Arial;
+     	text-decoration: none;
+     } 
+body{
+		background: url('green.png');
+		background-repeat: no-repeat;
+		background-size: 100%;
+		margin-left: 20px;
+		margin-right: 20px;
+		text-decoration: none;
+		list-style: none;
+	}
+	h1, h2, h3, p, ol, a{
+		color: white;
+	}
+	.Home
+	{
+		border-radius: 10px;
+		border: none;
+		height: 30px;
+		width: 70px;
+		text-align: center;
+		border-bottom: solid 1px;
+		border-color: : white;
+
+	}
+#menu {
+	background-color: rgba(0, 0, 255, 0);
+	height: 70px;
+	width: 100%;
+}
+#menu li a:hover {
+	color: black;
+	background:skyblue;
+	transition: 0.8s;
+	border-radius:50px ;
+	
+}
+}
+#menu li:hover ul.sub-menus {
+	display: block
+}
+#menu li {
+	
+	display: inline;
+	position: relative;
+}
+#menu a {
+	font-family: Arial;
+	font-weight: lighter;
+	display: block;
+	line-height: 30px;
+	padding: 0 14px;
+	text-decoration: none;
+	color: black;
+	font-size: 20px;
+	text-transform: uppercase;
+	background-color: white;
+	border-radius: 50px;
+}
+
+
+#menu input {
+	display: none;
+	margin: 0;
+	padding: 0;
+	height: 70px;
+	width: 100%;
+	opacity: 0;
+	cursor: pointer;
+
+}
+#menu label {
+	display: none;
+	line-height: 70px;
+	text-align: center;
+	position: absolute;
+	left: 35px;
+}
+#menu label:before {
+	font-size: 1.6em;
+	content: "\2261"; 
+	margin-left: 20px;
+}
+
+@media screen and (max-width: 800px){
+	#menu {
+		position:relative
+	}
+	#menu ul {
+		background:purple;
+		position:absolute;
+		top:100%;
+		right:0;
+		left:0;
+		z-index:3;
+		height:auto;
+		display:none}
+	#menu ul.sub-menus {
+		width:100%;
+		position:static;
+	}
+	#menu ul.sub-menus a {
+		padding-left:30px;
+	}
+	#menu li {
+		display:block;
+		float:none;
+		width:auto;
+	}
+	#menu input, #menu label {
+		position:absolute;
+		top:0;
+		left:0;
+		display:block
+	}
+	#menu input {
+		z-index:4;
+	}
+	#menu input:checked + label {
+		color:white;
+	}
+	#menu input:checked + label:before {content:"\00d8"}
+	#menu input:checked ~ ul {display:block}
+}
+</style>
+<body>
+
+	<nav id="menu">
+	<input type='checkbox' id='responsive-menu' onclick='updatemenu()'><label></label>
+		<center>
+		<img src="NLPSC Logo.png" height="100" width="100" >
+		<img src="CS Logo.png" height="100" width="100" >
+	</center>
+  	<li><a href='Home.html' style="float: right">Home</a></li>
+  		
+		<center>
+		<h2>NORTH LUZON PHILIPPINES STATE COLLEGE</h2>
+		<h2>San Nicolas, Candon City, Ilocos sur</h2>
+	</center>
+</nav>
+<br><br><br><br><br><br>
+
+
+<h1>CS 301-Emerging Technologies</h1>
+ <h3>IV. Course Description</h3>
+<p align="justify">
+  This course Applications Development and Emerging Technologies focuses on the development of software applications using web, mobile, and emerging
+technologies, with emphasis requirements management, interface design principles, usability, testing and deployment. Moreover, the course covers the ethical and legal 
+considerations of applications development
+</p>
+<p font size="13">
+  <h2>V. Course Learning Outcome</h2>
+  <p>Understanding Applications Development and Emerging Technologies</p>
+<ol type="A">
+  <li> <b>Applications Development</b></li>
+    <ol type="number">
+      <li>Define Application Development</li>
+      <li>Stages of Software Development</li>
+      <li>Software Development Approaches</li>
+      <li>ntroductory concepts on Web and Mobile Development</li>
+    </ol>
+    <br>
+  </li>
+    <li><b>Emerging Technologies</b></li>
+      <ol type="A">
+        <li> Definition of Terms</li>
+        <li>Characteristics of emerging technologies and how these emerge</li>
+        <li>Emerging technologies and their potential applications</li>
+        <ol type="number">
+          <li>Education</li>
+          <li>Business</li>
+          <li>Health</li>
+          <li>Society</li>
+        </ol>
+        <li>Definition of Industrial Revolution 4.0</li>
+        <li> Stages of Industrial Revolution 4.0</li>
+        <li>Building blocks of Industry 4.0</li>
+        <li>Components of Smart Factory</li>
+      </ol>
+</ol>
+</p>
+</body>
+<script>
+	function updatemenu() {
+  if (document.getElementById('responsive-menu').checked == true) {
+    document.getElementById('menu').style.borderBottomRightRadius = '0';
+    document.getElementById('menu').style.borderBottomLeftRadius = '0';
+  }else{
+    document.getElementById('menu').style.borderRadius = '7px';
+  }
+}
+</script>
+</html>
